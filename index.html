@@ -1,36 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baixar 7XPG App</title>
+    <title>Baixar App 7XPG</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         .container { max-width: 500px; margin: auto; }
-        .btn { display: block; margin: 20px auto; padding: 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-size: 18px; }
-        .btn:hover { background-color: #0056b3; }
+        .btn { display: block; margin: 10px 0; padding: 15px; background: #28a745; color: #fff; text-decoration: none; border-radius: 5px; }
+        .qr { margin-top: 20px; }
     </style>
-    <script>
-        function detectOS() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            if (/android/i.test(userAgent)) {
-                window.location.href = "https://drive.google.com/file/d/xxx/download";
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = "https://drive.google.com/file/d/yyy/download";
-            } else {
-                document.getElementById("manual").style.display = "block";
-            }
-        }
-    </script>
 </head>
-<body onload="detectOS()">
+<body>
+
     <div class="container">
-        <h1>Baixe o App 7XPG</h1>
-        <p>Seu dispositivo será detectado automaticamente e redirecionado para o download correto.</p>
-        <div id="manual" style="display:none;">
-            <a href="https://drive.google.com/file/d/xxx/download" class="btn">Baixar para Android</a>
-            <a href="https://drive.google.com/file/d/yyy/download" class="btn">Baixar para iPhone</a>
+        <h1>Baixar App 7XPG</h1>
+        <p>Detectamos seu sistema automaticamente. Clique no botão para baixar o app.</p>
+
+        <a id="download-link" class="btn" href="#">Baixar Agora</a>
+
+        <div class="qr">
+            <p>Ou escaneie o QR Code:</p>
+            <img id="qr-code" src="" alt="QR Code para download" width="200">
         </div>
     </div>
+
+    <script>
+        let androidLink = "https://drivhttps://drive.google.com/file/d/1caEKZ_PIOMBam7XVvQJ6ZBNCOYkyYtIS/view?usp=drive_linke.google.com/uc?export=download&id=ID_DO_ARQUIVO_APK";
+        <h2>Atualizar jogo iPhone</h2>
+<p>Se você não conseguir baixar o aplicativo, você pode<a href="https://drive.https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_linkgoogle.com/file/d/VIDEO_ID/view">Assista ao tutorial em vídeo aqui</a>.</p>
+
+
+        let userAgent = navigator.userAgent.toLowerCase();
+        let downloadLink = androidLink;
+        if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+            downloadLink = iosLink;
+        }
+
+        document.getElementById("download-link").href = downloadLink;
+
+        let qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(downloadLink);
+        document.getElementById("qr-code").src = qrCodeUrl;
+    </script>
+
 </body>
 </html>
