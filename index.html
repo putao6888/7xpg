@@ -5,43 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baixar App 7XPG</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        .container { max-width: 500px; margin: auto; }
-        .btn { display: block; margin: 10px 0; padding: 15px; background: #28a745; color: #fff; text-decoration: none; border-radius: 5px; }
-        .qr { margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .btn {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .android {
+            background-color: #4CAF50;
+        }
+        .iphone {
+            background-color: #007AFF;
+        }
+        .video-container {
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>Baixar App 7XPG</h1>
-        <p>Detectamos seu sistema automaticamente. Clique no botão para baixar o app.</p>
+        <h1>Baixe o aplicativo 7XPG</h1>
+        <p>Escolha a versão do aplicativo de acordo com seu dispositivo.</p>
 
-        <a id="download-link" class="btn" href="#">Baixar Agora</a>
+        <!-- Botão de Download para Android -->
+        <a href="https://drive.google.com/file/d/1caEKZ_PIOMBam7XVvQJ6ZBNCOYkyYtIS/view?usp=drive_link" class="btn android">
+            📥 Baixar para Android
+        </a>
 
-        <div class="qr">
-            <p>Ou escaneie o QR Code:</p>
-            <img id="qr-code" src="" alt="QR Code para download" width="200">
+        <!-- Seção do iPhone: Vídeo de Instrução -->
+        <div class="video-container">
+            <h2>📺 Como instalar no iPhone</h2>
+            <iframe src="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/preview" allow="autoplay"></iframe>
+            <p>Se não conseguir visualizar o vídeo, <a href="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link" style="color: yellow;">clique aqui</a>.</p>
         </div>
     </div>
-
-    <script>
-        let androidLink = "https://drivhttps://drive.google.com/file/d/1caEKZ_PIOMBam7XVvQJ6ZBNCOYkyYtIS/view?usp=drive_linke.google.com/uc?export=download&id=ID_DO_ARQUIVO_APK";
-        <h2>Atualizar jogo iPhone</h2>
-<p>Se você não conseguir baixar o aplicativo, você pode<a href="https://drive.https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_linkgoogle.com/file/d/VIDEO_ID/view">Assista ao tutorial em vídeo aqui</a>.</p>
-
-
-        let userAgent = navigator.userAgent.toLowerCase();
-        let downloadLink = androidLink;
-        if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
-            downloadLink = iosLink;
-        }
-
-        document.getElementById("download-link").href = downloadLink;
-
-        let qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(downloadLink);
-        document.getElementById("qr-code").src = qrCodeUrl;
-    </script>
-
 </body>
 </html>
