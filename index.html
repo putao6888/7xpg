@@ -67,11 +67,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Ensure text and video are stacked */
         }
         iframe {
-            width: 90%; /* Điều chỉnh kích thước video theo màn hình */
-            max-width: 420px; /* Gần bằng kích thước iPhone */
-            height: 700px; /* Gần bằng tỷ lệ màn hình iPhone */
+            width: 90%;
+            max-width: 420px;
+            height: 700px;
             border: none;
             border-radius: 15px;
         }
@@ -82,11 +83,24 @@
             width: 100%;
             border-radius: 10px;
         }
+        /* Styling for the paragraph text and the link */
+        .video-text {
+            margin-top: 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .video-text a {
+            color: yellow;
+            text-decoration: none;
+        }
+        .video-text a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📲 Baixe o aplicativo 7XPG</h1>
+        <h1>📲 Baixe o aplicativo 7XPG.com</h1>
         <p>Escolha a versão do aplicativo de acordo com seu dispositivo.</p>
 
         <!-- Botão de Download para Android -->
@@ -99,8 +113,10 @@
         <div class="video-container">
             <h2>📺 Como instalar no iPhone</h2>
             <iframe src="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/preview" allow="autoplay"></iframe>
-            <p>Se não conseguir visualizar o vídeo, <a href="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link" style="color: yellow;">clique aqui</a>.</p>
-        </div>
+            <!-- Text and link under the video -->
+            <div class="video-text">
+                <p>Se não conseguir visualizar o vídeo, <a href="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link">clique aqui</a>.</p>
+            </div>
     </div>
 </body>
 </html>
