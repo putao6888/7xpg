@@ -17,7 +17,7 @@
             margin: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             width: 90%;
             padding: 20px;
             background: rgba(0, 0, 0, 0.8);
@@ -26,13 +26,16 @@
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
         }
         h1 {
-            font-size: 24px;
+            font-size: 28px;
         }
         p {
-            font-size: 16px;
+            font-size: 18px;
         }
         .btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             width: 80%;
             margin: 15px auto;
             padding: 15px;
@@ -42,6 +45,10 @@
             border-radius: 5px;
             font-weight: bold;
             transition: 0.3s;
+        }
+        .btn img {
+            width: 30px;
+            height: 30px;
         }
         .android {
             background-color: #4CAF50;
@@ -64,15 +71,23 @@
             border: none;
             border-radius: 5px;
         }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Baixe o aplicativo 7XPG</h1>
+        <h1>📲 Baixe o aplicativo 7XPG</h1>
         <p>Escolha a versão do aplicativo de acordo com seu dispositivo.</p>
 
         <!-- Botão de Download para Android -->
         <a href="https://drive.google.com/file/d/1caEKZ_PIOMBam7XVvQJ6ZBNCOYkyYtIS/view?usp=drive_link" class="btn android">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
             📥 Baixar para Android
         </a>
 
@@ -81,6 +96,12 @@
             <h2>📺 Como instalar no iPhone</h2>
             <iframe src="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/preview" allow="autoplay"></iframe>
             <p>Se não conseguir visualizar o vídeo, <a href="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link" style="color: yellow;">clique aqui</a>.</p>
+        </div>
+
+        <!-- Exibir imagem minh họa -->
+        <div class="image-container">
+            <h2>📌 Interface do App 7XPG</h2>
+            <img src="https://via.placeholder.com/800x400.png?text=Preview+do+App+7XPG" alt="Imagem do App">
         </div>
     </div>
 </body>
