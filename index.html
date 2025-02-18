@@ -10,15 +10,20 @@
             text-align: center;
             background: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg') no-repeat center center fixed;
             background-size: cover;
-            color: white;
-            padding: 20px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
         }
         .container {
             max-width: 600px;
-            margin: auto;
+            width: 90%;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
+            color: white;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
         }
         h1 {
             font-size: 24px;
@@ -29,19 +34,26 @@
         .btn {
             display: block;
             width: 80%;
-            margin: 10px auto;
+            margin: 15px auto;
             padding: 15px;
             font-size: 18px;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: 0.3s;
         }
         .android {
             background-color: #4CAF50;
         }
+        .android:hover {
+            background-color: #3e8e41;
+        }
         .iphone {
             background-color: #007AFF;
+        }
+        .iphone:hover {
+            background-color: #005bb5;
         }
         .video-container {
             margin-top: 20px;
