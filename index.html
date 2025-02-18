@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar 7XPG App</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 500px; margin: auto; }
+        .btn { display: block; margin: 20px auto; padding: 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-size: 18px; }
+        .btn:hover { background-color: #0056b3; }
+    </style>
+    <script>
+        function detectOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://drive.google.com/file/d/xxx/download";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://drive.google.com/file/d/yyy/download";
+            } else {
+                document.getElementById("manual").style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body onload="detectOS()">
+    <div class="container">
+        <h1>Baixe o App 7XPG</h1>
+        <p>Seu dispositivo será detectado automaticamente e redirecionado para o download correto.</p>
+        <div id="manual" style="display:none;">
+            <a href="https://drive.google.com/file/d/xxx/download" class="btn">Baixar para Android</a>
+            <a href="https://drive.google.com/file/d/yyy/download" class="btn">Baixar para iPhone</a>
+        </div>
+    </div>
+</body>
+</html>
