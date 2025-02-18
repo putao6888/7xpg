@@ -64,12 +64,16 @@
         }
         .video-container {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         iframe {
-            width: 100%;
-            height: 315px;
+            width: 90%; /* Điều chỉnh kích thước video theo màn hình */
+            max-width: 420px; /* Gần bằng kích thước iPhone */
+            height: 700px; /* Gần bằng tỷ lệ màn hình iPhone */
             border: none;
-            border-radius: 5px;
+            border-radius: 15px;
         }
         .image-container {
             margin-top: 20px;
