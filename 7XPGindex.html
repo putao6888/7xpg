@@ -65,7 +65,7 @@
         .video-container {
             margin-top: 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
         iframe {
@@ -95,64 +95,53 @@
             border-top: 2px solid #333;
             display: none; /* Inicialmente oculto, será exibido via JavaScript */
         }
-
         .customer-support a {
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
         }
-
         .customer-support a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
-	<body>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à página de download do App 7XPG</h1>
+        <p>Baixe o aplicativo para desfrutar de jogos emocionantes!</p>
 
-		<!-- Conteúdo da página -->
-		<div style="text-align: center; padding: 50px;">
-			<h1>Bem-vindo à página de download do App 7XPG</h1>
-			<p>Baixe o aplicativo para desfrutar de jogos emocionantes!</p>
+        <!-- Botão de download para Android -->
+        <a class="btn android" href="https://docs.google.com/uc?export=download&id=1Q7VGxKD9k6XCL-diA3a7BTb-mRRlYQ3t">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
+            📥 Baixar para Android
+        </a>
 
-			<!-- Botão de download para Android -->
-			<a href="https://docs.google.com/uc?export=download&id=1Q7VGxKD9k6XCL-diA3a7BTb-mRRlYQ3t/view?usp=sharing"
-			   class="btn android"
-			   style="display: inline-block; padding: 15px; background-color: green; color: white; font-size: 18px; text-decoration: none; border-radius: 5px;">
-				📥 Baixar para Android
-			</a>
+        <!-- Vídeo tutorial de instalação para iPhone -->
+        <div class="video-container">
+            <h2>📺 Como instalar no iPhone</h2>
+            <iframe src="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/preview" allow="autoplay"></iframe>
+            <div class="video-text">
+                <p>Se não conseguir visualizar o vídeo, <a href="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link" target="_blank">clique aqui</a>.</p>
+            </div>
+        </div>
 
-			<!-- Vídeo tutorial de instalação para iPhone -->
-			<div style="margin-top: 20px;">
-				<h2>Instalação no iPhone</h2>
-				<video width="320" height="580" controls="">
-					<source src="https://docs.google.com/uc?export=download&id=1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr" type="video/mp4">
-                Seu navegador não suporta vídeo.
-            </video>
-				<p>
-					<a href="https://docs.google.com/uc?export=download&id=1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link" target="_blank">🔗 Ver vídeo tutorial</a>
-				</p>
-			</div>
-		</div>
+        <!-- 🔹 Mensagem de suporte ao cliente (oculta automaticamente após 10 segundos) -->
+        <div class="customer-support" id="support-message">
+            Se você encontrar qualquer problema, por favor, entre em contato com o 
+            <a href="https://t.me/pg_777ann" target="_blank">nosso serviço de atendimento ao cliente</a>.
+        </div>
+    </div>
 
-		<!-- 🔹 Mensagem de suporte ao cliente (oculta automaticamente após 10 segundos) -->
-		<div class="customer-support" id="support-message">
-			Se você encontrar qualquer problema, por favor, entre em contato com o
-			<a href="https://t.me/pg_777ann" target="_blank">nosso serviço de atendimento ao cliente</a>.
-		</div>
-
-		<script>
-			// Exibe a mensagem assim que a página carregar
-			document.addEventListener("DOMContentLoaded", function() {
-			let supportMessage = document.getElementById("support-message");
-			supportMessage.style.display = "block";
-
-			// Oculta automaticamente após 10 segundos
-			setTimeout(function() {
-			supportMessage.style.display = "none";
-			}, 10000); // 10000ms = 10 segundos
-			});
-		</script>
-
-	</body>
+    <script>
+        // Exibe a mensagem assim que a página carregar
+        document.addEventListener("DOMContentLoaded", function() {
+            let supportMessage = document.getElementById("support-message");
+            supportMessage.style.display = "block";
+            // Oculta automaticamente após 10 segundos
+            setTimeout(function() {
+                supportMessage.style.display = "none";
+            }, 10000); // 10000ms = 10 segundos
+        });
+    </script>
+</body>
 </html>
-	
