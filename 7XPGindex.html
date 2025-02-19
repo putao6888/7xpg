@@ -8,7 +8,8 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png');
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png');
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
@@ -72,18 +73,16 @@
       align-items: center;
     }
     iframe {
-      width: 90%; /* Điều chỉnh kích thước video theo màn hình */
-      max-width: 420px; /* Gần bằng kích thước iPhone */
-      height: 700px; /* Gần bằng tỷ lệ màn hình iPhone */
+      width: 90%;
+      max-width: 420px;
+      height: auto;
+      aspect-ratio: 9 / 16; /* Tỉ lệ gần với iPhone */
       border: none;
       border-radius: 15px;
     }
-    .image-container {
-      margin-top: 20px;
-    }
-    .image-container img {
-      width: 100%;
-      border-radius: 10px;
+    .video-text {
+      margin-top: 10px;
+      font-size: 16px;
     }
     .customer-support {
       background-color: #ffcc00;
@@ -134,17 +133,5 @@
       <a href="https://t.me/pg_777ann" target="_blank">nosso serviço de atendimento ao cliente</a>.
     </div>
   </div>
-
-  <script>
-    // Hiển thị thông báo hỗ trợ ngay sau khi trang tải xong
-    document.addEventListener("DOMContentLoaded", function() {
-      let supportMessage = document.getElementById("support-message");
-      supportMessage.style.display = "block";
-      // Ẩn thông báo sau 10 giây
-      setTimeout(function() {
-        supportMessage.style.display = "none";
-      }, 10000);
-    });
-  </script>
 </body>
 </html>
