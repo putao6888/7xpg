@@ -8,7 +8,8 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg') no-repeat center center fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
       display: flex;
@@ -69,11 +70,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      width: 100%;
     }
     .video-container iframe {
-      width: 100%;
-      max-width: 500px;
-      height: 300px;
+      width: 90%;
+      max-width: 400px;
+      height: 700px;
       border: none;
       border-radius: 15px;
     }
