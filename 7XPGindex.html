@@ -25,14 +25,6 @@
             color: white;
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
         }
-		.customer-support {
-            background-color: #f8f9fa;
-            padding: 15px;
-            text-align: center;
-            border-top: 1px solid #e7e7e7;
-            font-size: 16px;
-            color: #333;
-        }	
         h1 {
             font-size: 28px;
         }
@@ -75,12 +67,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Ensure text and video are stacked */
         }
         iframe {
-            width: 90%;
-            max-width: 420px;
-            height: 700px;
+            width: 90%; /* Điều chỉnh kích thước video theo màn hình */
+            max-width: 420px; /* Gần bằng kích thước iPhone */
+            height: 700px; /* Gần bằng tỷ lệ màn hình iPhone */
             border: none;
             border-radius: 15px;
         }
@@ -91,45 +82,77 @@
             width: 100%;
             border-radius: 10px;
         }
-        /* Styling for the paragraph text and the link */
-        .video-text {
-            margin-top: 15px;
-            font-size: 16px;
+        .customer-support {
+            background-color: #ffcc00; /* Cor amarela destacada */
+            padding: 15px;
             text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #333;
+            display: none; /* Inicialmente oculto, será exibido via JavaScript */
         }
-        .video-text a {
-            color: yellow;
+
+        .customer-support a {
+            color: #007bff;
             text-decoration: none;
+            font-weight: bold;
         }
-        .video-text a:hover {
+
+        .customer-support a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>📲 Baixe o aplicativo 7XPG</h1>
-        <p>Escolha a versão do aplicativo de acordo com seu dispositivo.</p>
+	<body>
 
-        <!-- Botão de Download para Android -->
-        <a href="https://drive.google.com/uc?export=download&id=1Q7VGxKD9k6XCL-diA3a7BTb-mRRlYQ3t" class="btn android">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
-            📥 Baixar para Android
-        </a>
+		<!-- Conteúdo da página -->
+		<div style="text-align: center; padding: 50px;">
+			<h1>Bem-vindo à página de download do App 7XPG</h1>
+			<p>Baixe o aplicativo para desfrutar de jogos emocionantes!</p>
 
-        <!-- Seção do iPhone: Vídeo de Instrução -->
-        <div class="video-container">
-            <h2>📺 Como instalar no iPhone</h2>
-            <iframe src="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/preview" allow="autoplay"></iframe>
-            <!-- Text and link under the video -->
-            <div class="video-text">
-                <p>Se não conseguir visualizar o vídeo, <a href="https://drive.google.com/file/d/1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link">clique aqui</a>.</p>
-            </div>
-			<!-- Thông báo liên hệ hỗ trợ khách hàng -->
-            <div class="customer-support">
-                <p>Se você encontrar qualquer problema, por favor, entre em contato com o nosso serviço de atendimento ao cliente. Obrigado.❤️</p>
-        </div>
-    </div>
-</body>
+			<!-- Botão de download para Android -->
+			<a href="https://docs.google.com/uc?export=download&id=1Q7VGxKD9k6XCL-diA3a7BTb-mRRlYQ3t/view?usp=sharing"
+			   class="btn android"
+			   style="display: inline-block; padding: 15px; background-color: green; color: white; font-size: 18px; text-decoration: none; border-radius: 5px;">
+				📥 Baixar para Android
+			</a>
+
+			<!-- Vídeo tutorial de instalação para iPhone -->
+			<div style="margin-top: 20px;">
+				<h2>Instalação no iPhone</h2>
+				<video width="320" height="580" controls="">
+					<source src="https://docs.google.com/uc?export=download&id=1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+				<p>
+					<a href="https://docs.google.com/uc?export=download&id=1qxAVr1SpdfWBj8y59dX5bYfAsqrTfzVr/view?usp=drive_link" target="_blank">🔗 Ver vídeo tutorial</a>
+				</p>
+			</div>
+		</div>
+
+		<!-- 🔹 Mensagem de suporte ao cliente (oculta automaticamente após 10 segundos) -->
+		<div class="customer-support" id="support-message">
+			Se você encontrar qualquer problema, por favor, entre em contato com o
+			<a href="https://t.me/pg_777ann" target="_blank">nosso serviço de atendimento ao cliente</a>.
+		</div>
+
+		<script>
+			// Exibe a mensagem assim que a página carregar
+			document.addEventListener("DOMContentLoaded", function() {
+			let supportMessage = document.getElementById("support-message");
+			supportMessage.style.display = "block";
+
+			// Oculta automaticamente após 10 segundos
+			setTimeout(function() {
+			supportMessage.style.display = "none";
+			}, 10000); // 10000ms = 10 segundos
+			});
+		</script>
+
+	</body>
 </html>
-s
+	
