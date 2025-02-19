@@ -8,17 +8,15 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: 0;
+      padding: 20px;
     }
     .container {
       max-width: 800px;
@@ -72,11 +70,10 @@
       flex-direction: column;
       align-items: center;
     }
-    iframe {
-      width: 90%;
-      max-width: 420px;
-      height: auto;
-      aspect-ratio: 9 / 16; /* Tỉ lệ gần với iPhone */
+    .video-container iframe {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
       border: none;
       border-radius: 15px;
     }
@@ -95,7 +92,7 @@
       bottom: 0;
       width: 100%;
       border-top: 2px solid #333;
-      display: none; /* Ban đầu ẩn, sẽ hiển thị qua JavaScript */
+      display: none;
     }
     .customer-support a {
       color: #007bff;
@@ -133,5 +130,15 @@
       <a href="https://t.me/pg_777ann" target="_blank">nosso serviço de atendimento ao cliente</a>.
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let supportMessage = document.getElementById("support-message");
+      supportMessage.style.display = "block";
+      setTimeout(function() {
+        supportMessage.style.display = "none";
+      }, 10000);
+    });
+  </script>
 </body>
 </html>
